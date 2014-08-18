@@ -1,0 +1,24 @@
+{
+  "name": "SnapAV-Server",
+  "version": "0.0.1",
+  "description": "SnapAV RescueMe Server/Web",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Socket.io"
+  ],
+  "author": "Graham Hardy",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.8.4",
+    "socket.io": "^1.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.2.1",
+    "grunt": "^0.4.5",
+    "grunt-nodemon": "^0.3.0"
+  }
+}

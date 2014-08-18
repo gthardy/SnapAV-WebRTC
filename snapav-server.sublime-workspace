@@ -1,0 +1,614 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cam",
+				"cameraPic"
+			],
+			[
+				"lisen",
+				"listen(5000"
+			],
+			[
+				"li",
+				"listen"
+			],
+			[
+				"soc",
+				"socketio"
+			],
+			[
+				"Find",
+				"FindCustomers"
+			],
+			[
+				"create",
+				"createdDate"
+			],
+			[
+				"De",
+				"DeleteEmployee"
+			],
+			[
+				"de",
+				"departmentSchema"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 501,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sockets/index.js",
+			"settings":
+			{
+				"buffer_size": 405,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 1795,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".bowerrc",
+			"settings":
+			{
+				"buffer_size": 32,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 497,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Pca",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Pcak",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Pa",
+				"Package Control: Discover Packages"
+			],
+			[
+				"PA",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"P",
+				"Package Control: Install Package"
+			],
+			[
+				"Pc",
+				"Package Control: List Packages"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pck",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Pacak",
+				"Package Control: Enable Package"
+			],
+			[
+				"Angu",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"PACK",
+				"Package Control: Install Package"
+			],
+			[
+				"PAC",
+				"Package Control: Enable Package"
+			],
+			[
+				"Pac",
+				"Package Control: Enable Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"Angul",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"Snippet: 	",
+				"Snippet: setTimeout function"
+			],
+			[
+				"page",
+				"Package Control: List Packages"
+			],
+			[
+				"p",
+				"Package Control: List Packages"
+			],
+			[
+				"Add",
+				"Package Control: Add Repository"
+			],
+			[
+				"pak",
+				"Package Control: Install Package"
+			],
+			[
+				"Package ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Pak",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: L",
+				"Snippet: Lorem ipsum"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"EditorConfig",
+			"emmit",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read()) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/gthardy/Desktop/SnapAV/SnapAV-Server/sockets/index.js",
+		"/Users/gthardy/Desktop/SnapAV/SnapAV-Server/public/index.html",
+		"/Users/gthardy/Desktop/SnapAV/SnapAV-Server/server.js",
+		"/Users/gthardy/Desktop/SnapAV/SnapAV-Server/gruntfile.js",
+		"/Users/gthardy/Desktop/SnapAV/SnapAV-Server/.gitignore",
+		"/Users/gthardy/Desktop/SnapAV/SnapAV-Server/.bowerrc",
+		"/Users/gthardy/Desktop/WebRTC/webRTC.sublime-project",
+		"/Users/gthardy/Downloads/chat-example-master/index.js",
+		"/Users/gthardy/Downloads/chat-example-master/index.html",
+		"/Users/gthardy/Desktop/SnapAVHelp/.bowerrc",
+		"/Users/gthardy/Desktop/SnapAVHelp/www/.bowerrc",
+		"/Users/gthardy/Desktop/hello/www/js/index.js",
+		"/Users/gthardy/Desktop/hello/config.xml",
+		"/Users/gthardy/Desktop/hello/www/index.html",
+		"/Users/gthardy/Desktop/hello/.bowerrc",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MyPhoneGapApp/www/index_old.html",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MyPhoneGapApp/www/index_new.html",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MyPhoneGapApp/www/index.html",
+		"/F/Documents/Box Sync/SublimeText/MyPhoneGapApp/www/index.html",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/Control/CONTROL/Control/control.js",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/MyPhoneGapApp/www/config.xml",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/MyPhoneGapApp/www/js/index.js",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/MyPhoneGapApp/www/index.html",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/MyPhoneGapApp/www/spec.html",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/MobileCam/server.js",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/MobileCam/public/index.html",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/MobileCam/gruntfile.js",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/MobileCam/node_modules/phonegap/bin/phonegap.js",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/MobileCam/node_modules/phonegap/lib/phonegap.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/sockets/index.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/node_modules/phonegap/README.md",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/server.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/public/index.html",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/package.json",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/node_modules/phonegap/COPYRIGHT",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/node_modules/phonegap/node_modules/cordova-lib/node_modules/npm/scripts/clean-old.sh",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/node_modules/grunt/CONTRIBUTING.md",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/updater/index.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/gruntfile.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/MobileCam/.bowerrc",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/node_modules/mongodb/node_modules/bson/t",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/public/libs/bootstrap/less/mixins/text-emphasis.less",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/node_modules/nodemon/node_modules/update-notifier/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/test/integration/test-pipe-resumes.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/node_modules/nodemon/node_modules/ps-tree/node_modules/event-stream/readme.markdown",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/readme-issue.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/node_modules/nodemon/node_modules/ps-tree/node_modules/event-stream/index.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/public/libs/angular-route/angular-route.min.js.map",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/node_modules/nodemon/node_modules/update-notifier/node_modules/request/node_modules/http-signature/node_modules/asn1/LICENSE",
+		"/Users/gthardy/Documents/Dropbox (Snap AV)/SAPB1-SCALE Integration/DFW-GO-LIVE/SQL/FixMariosInventory.sql",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/public/views/main/index.html",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/server.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/public/app.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/public/controllers/customer-controller.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/public/views/customers/index.html",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/public/index.html",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/Northwind/api/customer/index.js",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/Northwind/server.js",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/Northwind/.gitignore",
+		"/C/Users/graham.hardy/Box Sync/Development/Code/Sql Fundimentals/01-CTE and Rankings.sql",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/Northwind/package.json",
+		"/C/Users/graham.hardy/Box Sync/SublimeText/Northwind/.bowerrc",
+		"/C/Users/graham.hardy/Desktop/Northwind/server.js",
+		"/C/Users/graham.hardy/Desktop/Northwind/package.json",
+		"/C/Users/graham.hardy/Downloads/northwind-mongo-master/InstallNorthwind.ps1",
+		"/C/Users/graham.hardy/Desktop/mongodb.log",
+		"/C/Users/graham.hardy/Desktop/TestApp/public/index.html",
+		"/C/Users/graham.hardy/Desktop/TestApp/public/.bowerrc",
+		"/C/Users/graham.hardy/Desktop/TestApp/.bowerrc",
+		"/C/Users/graham.hardy/Desktop/TestApp/package.json",
+		"/C/Users/graham.hardy/Desktop/TestApp/server.js",
+		"/C/Users/graham.hardy/Desktop/test.js",
+		"/C/Users/graham.hardy/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/data/database.js",
+		"/C/Users/graham.hardy/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/data/index.js",
+		"/C/Users/graham.hardy/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/controllers/notesController.js",
+		"/C/Users/graham.hardy/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/server.js",
+		"/C/Users/graham.hardy/Desktop/SalesOrder-OnHoldStatus.sql",
+		"/C/Users/graham.hardy/Desktop/RA-Inventory.sql",
+		"/C/Program Files (x86)/SAP/SAP Business One SDK/Samples/UDO/addUDO/CSharp/frmUDO.cs",
+		"/C/Users/graham.hardy/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/controllers/index.js",
+		"/C/Users/graham.hardy/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/controllers/homeController.js",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/controllers/index.js",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/server.js",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/controllers/homeController.js",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/TheBoard/TheBoard/README.md",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/SublimeNode/logger/index.js",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/SublimeNode/node_modules/express/package.json",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/SublimeNode/node_modules/underscore/package.json",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/SublimeNode/package.json",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/SublimeNode/app.js",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/SublimeNode/msg.js",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/NodeJS for .NET Devs/SublimeNode/logger/file.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/NodeProject/js/app.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/msg.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/app.js",
+		"/Users/gthardy/Documents/Box Sync/SublimeText/logger/index.js",
+		"/Users/gthardy/Documents/Box Sync/Development/JavaScript/people.js",
+		"/Users/gthardy/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/gthardy/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/gthardy/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/gthardy/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/untitled.html",
+		"/data/mongodb.conf",
+		"/Users/gthardy/Documents/mongodb.conf.rtf",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/SupportHub/app/index.html",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/SupportHub/app/js/controllers/TicketsController.js",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/SupportHub/app/js/app.js",
+		"/Users/gthardy/Documents/Box Sync/Development/Code/AngularJS Fundamentals/angular-seed-master/app/js/app.js"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"[0-9]+"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 501,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sockets/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								275,
+								275
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								815,
+								815
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": ".bowerrc",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 32,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 497,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								278,
+								278
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "snapav-server.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/untitled.html"
+			],
+			[
+				"bo",
+				"css/bootstrap.css"
+			],
+			[
+				"b",
+				"css/bootstrap.css"
+			],
+			[
+				"jb",
+				"js/bootstrap.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 139.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}
