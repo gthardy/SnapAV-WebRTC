@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="RescueMe">
 	<head>
 		<title>
-			SnapAV Rescue Me!
+
 		</title>
 		<link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -10,86 +10,21 @@
 	<body>
 		<div class="container">
 			<div class="page-header">
-				<h1>SnapAV Rescue Me!</h1>
+				<h1>Test</h1>
 				<span class="right" id="time"></span>
 			</div>
-
-			<div class="row">
-				  <div class="col-sm-6 col-md-4">
-				    <div class="thumbnail">
-				      <video id="localVideo" class="img-responsive" autoplay></video>
-				      <div class="caption">
-				        <h3>My Video</h3>
-				        <p>This is me in living person.</p>
-				        <p><button class="btn btn-primary" id="startButton">Start</button></p>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-				<div class="col-sm-6 col-md-4">
-				    <div class="thumbnail">
-				      <video id="remoteVideo" class="img-responsive" autoplay></video>
-				      <div class="caption">
-				        <h3>Other Person Video</h3>
-				        <p>This is someone else in person.</p>
-				        <p><button class="btn btn-success" id="callButton">Call</button>
-							<button class="btn btn-danger" id="hangupButton">Hang Up</button></p>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-			</div
-			<div class="row">
-				<div class="col-md-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">Chat Area</div>
-  						<div class="panel-body">
-							<ul class="list-group" id="messages"></ul>
-						</div>
-					</div>
-				    <form role="form" >
-					    <div class="form-group">
-						    <div class="input-group">
-						    	<input id="m" class="form-control" autocomplete="off" />
-						    	 <span class="input-group-btn">
-						    	 	<button type="submit" class="btn btn-primary">Send</button>
-						    	
-						    	 </span>
-						    </div>
-					    </div>
-				     
-				    </form>
-				</div>
-			</div>
-		</div>
-	</body>
+            <div class="row">
+                <div class="view-container">
+                    <div ng-view class="view-frame"></div>
+                </div>
+            </div>
+        </div>
+    </body>
 	<script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/angular/angular.js"></script>
+    <script type="text/javascript" src="libs/angular-route/angular-route.js"></script>
 	<script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/libs/socket.io-client/socket.io.js"></script>
-	<script type="text/javascript" src="js/video.js"></script>
-	<script type="text/javascript">
-			
-			$(function(){
-				var socket = io.connect();
-				socket.on('init', function(msg){
-					console.log(msg.msg);
-				});
-
-				socket.on('time', function(data) {
-                	console.log(data);
-            		$('#time').html(data.time);
-            	});
-
-            	$('form').submit(function(){
-		        	socket.emit('chat message', $('#m').val());
-		        	$('#m').val('');
-			        return false;
-			      });
-		      	socket.on('chat message', function(msg){
-			        $('#messages').append($('<li class="list-group-item">').text(msg));
-		      	});
-			});
-			
-		</script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="/controllers/main-controller.js"></script>
 </html>
