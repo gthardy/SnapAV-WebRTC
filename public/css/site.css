@@ -59,6 +59,10 @@
 }
 
 
-.equal {
-   height:100%;
+.footer{
+    padding-top:80px;
+    padding-bottom:10px;
+    padding-left: 10px;
+    padding-right:10px;
+
 }

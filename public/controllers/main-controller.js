@@ -68,7 +68,6 @@ app.controller('mainController', function($scope){
 
         socket.on('chat message', function(data){
             var time = new Date(data.time);
-            //$('#messages').append($('<li class="list-group-item">').text(data.name + ': ' + data.msg));
             $('#messages').append(
                 $('<li class="left clearfix">').append(
                     $('<div class="chat-body clearfix">').append(
