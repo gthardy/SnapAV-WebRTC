@@ -19,7 +19,7 @@ app.use(function(req, res){
 
 // Create Server
 var server = http.createServer(app);
-server.listen(5000);
+server.listen(process.env.port || 5000);
 
 
 var io = require('socket.io').listen(server);

@@ -3,15 +3,17 @@
 	sockets.init = function(server, io){
 		io.on('connection', function(socket){
 			
-			socket.emit('init', { msg: "Welcome to a test socket.io app!" });
-			
+			socket.on('init', function(data){
+                io.emit('init',  data);
+                console.log(data.name + ' ' + data.email + ' ' + data.peerId);
+            });
 
 			socket.on('chat message', function(msg){
 		    	io.emit('chat message', msg);
 		  	});
-			
+
 			setInterval(function(){
-				socket.emit('time', { time: new Date().toString() });
+				socket.emit('time', { time: new Date().toDateString() + ' ' +  new Date().toLocaleTimeString() });
 			}, 1000);
 			
 		});

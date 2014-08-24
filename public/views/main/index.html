@@ -1,50 +1,105 @@
-<div class="row">
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading"><b>{{ BriefDesc }}<b></div>
-            <div class="panel-body">
-                <ul class="list-group" id="messages"></ul>
-            </div>
-        </div>
 
-        <form role="form" >
-            <div class="form-group">
-                <div class="input-group">
-                    <input id="m" class="form-control" autocomplete="off" />
-                     <span class="input-group-btn">
-                        <button type="submit" class="btn btn-primary">Send</button>
-                     </span>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <div class="col-md-6">
-        <div class="thumbnail">
-            <video id="localVideo" class="img-responsive" autoplay="autoplay" controls="true"></video>
-            <div class="caption">
-                <h3>{{ CustomerName }}</h3>
-                <p><button class="btn btn-primary" ng-click="startVideo()" id="startButton">Start Video</button></p>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="row">
     <div class="col-md-12">
-        <div class="thumbnail">
-            <video id="remoteVideo" class="img-responsive" autoplay></video>
-            <div class="caption">
-                <h3>Other Person Video</h3>
-                <p>This is someone else in person.</p>
-                <p>
-                    <button class="btn btn-success" id="callButton">Call</button>
-                    <button class="btn btn-danger" id="hangupButton">Hang Up</button>
-                </p>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2>Welcome to Tech Support!</h2>
+                <div btn="btn-group">
+                    <button  type="button" class="btn btn-default" id="videoStart" ng-click="startVideo()">
+                        <span class="glyphicon glyphicon-facetime-video"></span> Video
+                    </button>
+                    <button type="button" class="btn btn-default" ng-click="endVideo()" id="videoEnd">End Video</button>
+                    <button type="button" class="btn btn-default" ng-click="endAudio()" id="audioEnd">
+                        <span class="glyphicon glyphicon-volume-off"></span> Audio Off
+                    </button>
+                    <button type="button" class="btn btn-default">Screen Share</button>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b>Chat About</b> {{ BriefDesc }}
+                            </div>
+                            <div class="panel-body">
+                                <ul class="list-group" id="messages"></ul>
+                                <form role="form" >
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input id="m" class="form-control" autocomplete="off" />
+                                     <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-primary">Send</button>
+                                     </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-8">
+                        <video id="localVideo" class="img-responsive" autoplay ></video>
+                    </div>
+
+                </div>
+            </div>
+            <div class="panel-footer">
+                Copyright &copy 2014 - SnapAV Labs
             </div>
         </div>
     </div>
 </div>
+
+<!--
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>Available Users</b>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group" id="availableUsers"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>My Video: {{ Name }}</h4>
+            </div>
+            <div class="panel-body">
+
+            </div>
+            <div class="panel-footer">
+                <button class="btn btn-primary" ng-click="startVideo()">Start Video</button>
+                <button class="btn btn-danger" ng-click="makeCall()">Make Call</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Their Video:</h4>
+            </div>
+            <div class="panel-body">
+                <video id="remoteVideo" class="img-responsive" autoplay ></video>
+            </div>
+            <div class="panel-footer">
+                <button class="btn btn-primary" id="callButton">Call</button>
+                <button class="btn btn-danger" id="hangupButton">Hang Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+-->
+
 
 <div id="myModal" class="modal fade">
     <div class="modal-dialog">
@@ -58,17 +113,16 @@
             <div class="modal-body">
                 <form role="form">
                     <div class="form-group">
-
-                        <input ng-model="CustomerName" type="text" class="form-control" id="customerName" placeholder="Please tell us your name.">
+                        <input ng-model="Name" type="text" class="form-control" placeholder="Enter your name..." required>
                     </div>
                     <div class="form-group">
-
-                        <input ng-model="BriefDesc" type="text" class="form-control" id="briefDesc" placeholder="Please enter a brief description of the issue.">
+                        <input ng-model="Email" type="text" class="form-control" placeholder="Enter your email address..." required />
                     </div>
+                    <div class="form-group">
+                        <input ng-model="BriefDesc" type="text" class="form-control" id="briefDesc" placeholder="A brief description of the issue.">
+                    </div>
+                    <button type="submit" ng-click="getCustomer()" class="btn btn-primary">Start Session</button>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" ng-click="getCustomer()" class="btn btn-primary">Start Session</button>
             </div>
         </div>
     </div>
