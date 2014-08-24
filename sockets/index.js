@@ -8,8 +8,8 @@
                 console.log(data.name + ' ' + data.email + ' ' + data.peerId);
             });
 
-			socket.on('chat message', function(msg){
-		    	io.emit('chat message', msg);
+			socket.on('chat message', function(data){
+                io.emit('chat message', data);
 		  	});
 
 			setInterval(function(){

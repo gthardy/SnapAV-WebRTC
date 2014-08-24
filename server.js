@@ -12,7 +12,6 @@ app.use(function(req, res, next){
 // Site Directory
 app.use(express.static('public'));
 
-
 app.use(function(req, res){
 	res.sendFile(__dirname + '/public');
 })
@@ -20,7 +19,6 @@ app.use(function(req, res){
 // Create Server
 var server = http.createServer(app);
 server.listen(process.env.port || 5000);
-
 
 var io = require('socket.io').listen(server);
 

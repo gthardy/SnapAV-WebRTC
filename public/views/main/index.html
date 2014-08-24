@@ -4,24 +4,142 @@
     <div class="col-md-12">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h2>Welcome to Tech Support!</h2>
-                <div btn="btn-group">
-                    <button  type="button" class="btn btn-default" id="videoStart" ng-click="startVideo()">
-                        <span class="glyphicon glyphicon-facetime-video"></span> Video
-                    </button>
-                    <button type="button" class="btn btn-default" ng-click="endVideo()" id="videoEnd">End Video</button>
-                    <button type="button" class="btn btn-default" ng-click="endAudio()" id="audioEnd">
-                        <span class="glyphicon glyphicon-volume-off"></span> Audio Off
-                    </button>
-                    <button type="button" class="btn btn-default">Screen Share</button>
-                </div>
-            </div>
-            <div class="panel-body">
                 <div class="row">
+                    <div class="col-md-6">
+                        <h2>SnapAV Labs - Tech Support!</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pull-right">
+                            <button  type="button" class="btn btn-default" id="videoStart" ng-click="startVideo()">
+                                <span class="glyphicon glyphicon-facetime-video"></span> Video
+                            </button>
+                            <button type="button" class="btn btn-default">Screen Share</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                Support Reps <span class="badge">{{ UserCount }}</span>
+                                <ul class="dropdown-menu" role="menu" id="availableUsers"></ul>
+                            </button>
+                            <!--
+                            <ul class="nav nav-pills nav-stacked pull-right">
+                                <li class="active">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reps <span class="badge">{{ UserCount }}</span></a>
+                                    <ul class="dropdown-menu" role="menu" id="availableUsers" >
+                                    </ul>
+                                </li>
+                            </ul>
+                            -->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="panel-body" style="height:600px">
+                <div class="row">
+                    <form role="form" >
+                        <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <span class="glyphicon glyphicon-comment"></span> Chat
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                                <span class="glyphicon glyphicon-chevron-down"></span>
+                                            </button>
+                                            <ul class="dropdown-menu slidedown">
+                                                <li><a href="#"><span class="glyphicon glyphicon-refresh">
+                                                    </span>Refresh</a></li>
+                                                <li><a href="#"><span class="glyphicon glyphicon-ok-sign">
+                                                    </span>Available</a></li>
+                                                <li><a href="#"><span class="glyphicon glyphicon-remove">
+                                                    </span>Busy</a></li>
+                                                <li><a href="#"><span class="glyphicon glyphicon-time"></span>
+                                                    Away</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#"><span class="glyphicon glyphicon-off"></span>
+                                                    Sign Out</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" style="height:450px;">
+                                        <ul class="chat" id="messages">
+                                            <!--
+                                            <li class="left clearfix">
+                                                <div class="chat-body clearfix">
+                                                    <div class="header">
+                                                        <strong class="primary-font">Jack Sparrow</strong>
+                                                        <small class="pull-right text-muted">
+                                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                                    </div>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                                        dolor, quis ullamcorper ligula sodales.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="left clearfix">
+                                                <div class="chat-body clearfix">
+                                                    <div class="header">
+                                                        <strong class="primary-font">Bhaumik Patel</strong>
+                                                        <small class="pull-right text-muted"><span class="glyphicon glyphicon-time">
+                                                        </span>13 mins ago</small>
+                                                    </div>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                                        dolor, quis ullamcorper ligula sodales.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="left clearfix">
+                                                <div class="chat-body clearfix">
+                                                    <div class="header">
+                                                        <strong class="primary-font">Jack Sparrow</strong>
+                                                        <small class="pull-right text-muted">
+                                                        <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                                                    </div>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                                        dolor, quis ullamcorper ligula sodales.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="left clearfix">
+                                                <div class="chat-body clearfix">
+                                                    <div class="header">
+                                                        <strong class="primary-font">Bhaumik Patel</strong>
+                                                        <small class="pull-right text-muted">
+                                                        <span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                                                    </div>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                                        dolor, quis ullamcorper ligula sodales.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            -->
+                                        </ul>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="input-group">
+                                            <input id="m" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-warning btn-sm" type="submit" id="btn-chat">
+                                                    Send</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    </form>
+                    <!--
                     <div class="col-md-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <b>Chat About</b> {{ BriefDesc }}
+
                             </div>
                             <div class="panel-body">
                                 <ul class="list-group" id="messages"></ul>
@@ -39,7 +157,10 @@
                         </div>
 
                     </div>
-                    <div class="col-md-8">
+                    -->
+
+
+                    <div class="col-md-6">
                         <video id="localVideo" class="img-responsive" autoplay ></video>
                     </div>
 
@@ -47,6 +168,8 @@
             </div>
             <div class="panel-footer">
                 Copyright &copy 2014 - SnapAV Labs
+
+                <span class="pull-right" id="time"></span>
             </div>
         </div>
     </div>
@@ -108,7 +231,7 @@
                 <button type="button" class="close" data-dismiss="modal">
                     <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                 </button>
-                <h4 class="modal-title">Speak to a Support Representative</h4>
+                <h4 class="modal-title">Speak to a SnapAV Support Representative</h4>
             </div>
             <div class="modal-body">
                 <form role="form">

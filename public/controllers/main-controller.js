@@ -5,8 +5,10 @@ app.controller('mainController', function($scope){
     $scope.Name = '';
     $scope.Email = '';
     $scope.BriefDesc = '';
+    $scope.UserCount = 0;
 
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
     var peer = peer = new Peer({
         // http://peerjs.com/peerserver
         key:  'im9l7izmb9lcv7vi',
@@ -19,8 +21,10 @@ app.controller('mainController', function($scope){
             ]
         }
     });
+
     var options = { audio: false, video: true };
     var socket = io.connect();
+
     $scope.init = function(){
 
         peer.on('open', function(){
@@ -28,7 +32,20 @@ app.controller('mainController', function($scope){
         });
 
         socket.on('init', function(data){
-            $('#availableUsers').append($('<li class="list-group-item">').text(data.name));
+            $scope.UserCount += 1;
+            //$('#availableUsers').append($('<li role="presentation"><a role="menuitem" tabindex="-1" href="#">').text(data.name));
+            $('#availableUsers').append(
+                $('<li role="presentation">').append(
+                    $('<a>', { "ng-click": "onCall(" + data.peerId + ")" }).text(data.name)
+                )
+            );
+
+
+            //$("<li>", {}).append(
+              //  $("<a>", { href: options[index].href }).text(
+                //    options[index].text
+                //)
+            //)
         });
 
         socket.on('time', function(data) {
@@ -37,12 +54,39 @@ app.controller('mainController', function($scope){
         });
 
         $('form').submit(function(){
-            socket.emit('chat message', $('#m').val());
+
+            var data= {};
+            data.msg = $('#m').val();
+            data.name = $scope.Name;
+            data.time = new Date();
+
+            socket.emit('chat message', data);
+
             $('#m').val('');
             return false;
         });
-        socket.on('chat message', function(msg){
-            $('#messages').append($('<li class="list-group-item">').text($scope.Name + ': ' + msg));
+
+        socket.on('chat message', function(data){
+            var time = new Date(data.time);
+            //$('#messages').append($('<li class="list-group-item">').text(data.name + ': ' + data.msg));
+            $('#messages').append(
+                $('<li class="left clearfix">').append(
+                    $('<div class="chat-body clearfix">').append(
+                        $('<div class="header">').append(
+                            $('<strong class="primary-font">').text(data.name).append(
+                                $('<small class="pull-right text-muted">').append(
+                                    $('<span class="glyphicon glyphicon-time">').text(' ' + time.toLocaleTimeString()).append(
+
+                                    )
+                                )
+                            )
+                        ).append(
+                            $('<p>').text(data.msg)
+                        )
+
+                  )
+              )
+            );
         });
 
         $('#myModal').modal('show');
