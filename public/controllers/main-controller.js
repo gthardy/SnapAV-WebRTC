@@ -9,7 +9,7 @@ app.controller('mainController', function($scope){
 
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-    var peer = peer = new Peer({
+    var peer = new Peer({
         // http://peerjs.com/peerserver
         key:  'im9l7izmb9lcv7vi',
         debug:3,
@@ -32,24 +32,20 @@ app.controller('mainController', function($scope){
         });
 
         socket.on('init', function(data){
-            $scope.UserCount += 1;
-            //$('#availableUsers').append($('<li role="presentation"><a role="menuitem" tabindex="-1" href="#">').text(data.name));
+
             $('#availableUsers').append(
                 $('<li role="presentation">').append(
-                    $('<a>', { "ng-click": "onCall(" + data.peerId + ")" }).text(data.name)
+                    $('<a>', { href: "" }).text(data.name)
                 )
             );
 
-
-            //$("<li>", {}).append(
-              //  $("<a>", { href: options[index].href }).text(
-                //    options[index].text
-                //)
-            //)
+            $('#availableUsers li a').click(function(peerId){
+               $scope.makeCall(peerId);
+            });
         });
 
+
         socket.on('time', function(data) {
-            //console.log(data);
             $('#time').html(data.time);
         });
 
@@ -88,6 +84,14 @@ app.controller('mainController', function($scope){
             );
         });
 
+        $('#navVideo').click(function(){
+            $scope.startVideo();
+        });
+
+        $('#navScreenSharing').click(function(){
+
+        });
+
         $('#myModal').modal('show');
     };
 
@@ -96,18 +100,13 @@ app.controller('mainController', function($scope){
         $('#myModal').modal('hide');
     };
 
-    $scope.makeCall = function(){
-        var conn = peer.connect($scope.PeerIdRemote);
-        conn.on('open', function(){
-            conn.send('hi');
-        });
+    $scope.makeCall = function(peerId){
         //navigator.getUserMedia(options, function(stream){
            //var call = peer.call($scope.PeerIdRemote, stream);
         //});
     };
 
     $scope.startVideo = function(){
-
         navigator.getUserMedia(options, $scope.onSuccessVideo, $scope.onError);
     };
 
