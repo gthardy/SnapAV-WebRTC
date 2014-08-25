@@ -2,6 +2,7 @@ app.controller('mainController', function($scope){
 
     $scope.Title = "Chat About: ";
     $scope.PeerId = '';
+    $scope.RemotePeerId = '';
     $scope.Name = '';
     $scope.Email = '';
     $scope.BriefDesc = '';
@@ -22,7 +23,7 @@ app.controller('mainController', function($scope){
         }
     });
 
-    var options = { audio: false, video: true };
+    var options = { audio: true, video: true };
     var socket = io.connect();
 
     $scope.init = function(){
@@ -30,17 +31,21 @@ app.controller('mainController', function($scope){
         peer.on('open', function(){
             $scope.PeerId = peer.id;
         });
-
+        peer.on('call', function(call){
+            call.answer(window.localStream);
+            $scope.onAnswer(call);
+        })
         socket.on('init', function(data){
 
             $('#availableUsers').append(
                 $('<li role="presentation">').append(
-                    $('<a>', { href: "" }).text(data.name)
+                    $('<a>', { href: "", id: data.peerId }).text(data.name)
                 )
             );
 
-            $('#availableUsers li a').click(function(peerId){
-               $scope.makeCall(peerId);
+            $('#' + data.peerId).click(function(){
+               $scope.makeCall(data.peerId);
+
             });
         });
 
@@ -101,29 +106,37 @@ app.controller('mainController', function($scope){
     };
 
     $scope.makeCall = function(peerId){
-        //navigator.getUserMedia(options, function(stream){
-           //var call = peer.call($scope.PeerIdRemote, stream);
-        //});
+        console.log("Users Peer Id: " + peerId);
+        $scope.RemotePeerId = peerId;
+        var call = peer.call(peerId, window.localStream);
     };
+
+    $scope.onAnswer = function(call){
+       if(window.existingCall){
+           window.existingCall.close();
+       }
+        call.on('stream', function(stream){
+           $('#remoteVideo').prop('src', URL.createObjectURL(stream));
+        });
+    }
 
     $scope.startVideo = function(){
         navigator.getUserMedia(options, $scope.onSuccessVideo, $scope.onError);
     };
 
     $scope.onSuccessVideo = function(stream){
-        var video = $('#localVideo')[0];
-        window.stream = stream;
-
-        if (window.URL) {
-            video.src = window.URL.createObjectURL(stream);
-        } else {
-            video.src = stream;
-        }
+        $('#localVideo').prop('src', URL.createObjectURL(stream));
+        window.localStream = stream;
     };
-
+    $scope.onSuccessRemoteVideo = function(call){
+        console.log(call);
+    }
     $scope.onError = function(e){
         console.log(e);
     };
 
     $scope.init();
 });
+function makeCall(peerId){
+    console.log(peerId);
+}
