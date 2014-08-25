@@ -45,7 +45,6 @@ app.controller('mainController', function($scope){
 
             $('#' + data.peerId).click(function(){
                $scope.makeCall(data.peerId);
-
             });
         });
 

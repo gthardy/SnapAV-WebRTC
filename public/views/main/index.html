@@ -49,18 +49,12 @@
         </form>
     </div>
 
-    <div class="col-md-6">
-        <div class="media">
-            <video id="remoteVideo" width="100%" height="100%" class="media-object" controls="false" autoplay ></video>
-            <div class="media-body">
-                Your Video
-            </div>
+    <div class="col-md-8">
+        <div class="videoContainer">
+            <video id="remoteVideo" class="media-object" width="100%" height="100%"  autoplay ></video>
         </div>
-        <div class="media">
-            <video id="localVideo" width="200" height="150" class="media-object" controls="false" autoplay ></video>
-            <div class="media-body">
-                My Video
-            </div>
+        <div id="videoOverlay" class="pull-right">
+            <video id="localVideo" width="200" height="150" class="media-object" autoplay ></video>
         </div>
     </div>
 </div>
