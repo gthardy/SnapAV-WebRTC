@@ -1,7 +1,19 @@
 
 
 <div class="row">
-    <div class="col-md-4">
+
+
+    <div class="col-md-8">
+        <div class="videoContainer">
+            <video id="remoteVideo" class="media-object" width="100%" height="100%"  autoplay ></video>
+        </div>
+        <div id="videoOverlay" class="pull-right">
+            <video id="localVideo" width="200" height="150" class="media-object" autoplay ></video>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 hidden-xs">
         <form role="form" >
             <div class="container">
                 <div class="row">
@@ -49,14 +61,7 @@
         </form>
     </div>
 
-    <div class="col-md-8">
-        <div class="videoContainer">
-            <video id="remoteVideo" class="media-object" width="100%" height="100%"  autoplay ></video>
-        </div>
-        <div id="videoOverlay" class="pull-right">
-            <video id="localVideo" width="200" height="150" class="media-object" autoplay ></video>
-        </div>
-    </div>
+
 </div>
 
 
@@ -74,13 +79,7 @@
                     <div class="form-group">
                         <input ng-model="Name" type="text" class="form-control" placeholder="Enter your name..." required>
                     </div>
-                    <div class="form-group">
-                        <input ng-model="Email" type="text" class="form-control" placeholder="Enter your email address..." required />
-                    </div>
-                    <div class="form-group">
-                        <input ng-model="BriefDesc" type="text" class="form-control" id="briefDesc" placeholder="A brief description of the issue.">
-                    </div>
-                    <button type="submit" ng-click="getCustomer()" class="btn btn-primary">Start Session</button>
+                    <button type="submit" ng-click="getCustomer()" class="btn btn-primary">Start Session!</button>
                 </form>
             </div>
         </div>

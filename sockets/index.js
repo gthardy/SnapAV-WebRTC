@@ -12,9 +12,9 @@
                 io.emit('chat message', data);
 		  	});
 
-			setInterval(function(){
-				socket.emit('time', { time: new Date().toDateString() + ' ' +  new Date().toLocaleTimeString() });
-			}, 1000);
+			//setInterval(function(){
+				//socket.emit('time', { time: new Date().toDateString() + ' ' +  new Date().toLocaleTimeString() });
+			//}, 1000);
 			
 		});
 	};

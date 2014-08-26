@@ -18,4 +18,4 @@ app.config(['$routeProvider', '$locationProvider',
             .otherwise({ redirectTo: '/' });
 
         $locationProvider.html5Mode(true);
-    }]);
+}]);

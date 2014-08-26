@@ -50,7 +50,7 @@ app.controller('mainController', function($scope){
 
 
         socket.on('time', function(data) {
-            $('#time').html(data.time);
+            //$('#time').html(data.time);
         });
 
         $('form').submit(function(){
@@ -136,6 +136,3 @@ app.controller('mainController', function($scope){
 
     $scope.init();
 });
-function makeCall(peerId){
-    console.log(peerId);
-}
