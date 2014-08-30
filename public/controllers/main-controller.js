@@ -31,10 +31,12 @@ app.controller('mainController', function($scope){
         peer.on('open', function(){
             $scope.PeerId = peer.id;
         });
+
         peer.on('call', function(call){
             call.answer(window.localStream);
             $scope.onAnswer(call);
-        })
+        });
+
         socket.on('init', function(data){
 
             $('#availableUsers').append(
@@ -47,7 +49,6 @@ app.controller('mainController', function($scope){
                $scope.makeCall(data.peerId);
             });
         });
-
 
         socket.on('time', function(data) {
             //$('#time').html(data.time);
