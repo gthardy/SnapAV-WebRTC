@@ -25,7 +25,7 @@ app.controller('mainController', function($scope){
 
     var options = { audio: true, video: true };
     var socket = io.connect();
-
+    var clients = [];
     $scope.init = function(){
 
         peer.on('open', function(){
@@ -38,16 +38,19 @@ app.controller('mainController', function($scope){
         });
 
         socket.on('init', function(data){
+            $('#availableUsers li').remove();
+            for (var i = 0; i < data.length; i++) {
+                $('#availableUsers').append(
+                    $('<li role="presentation">').append(
+                        $('<a>', { href: "", id: data[i].peerId }).text(data[i].name)
+                    )
+                );
 
-            $('#availableUsers').append(
-                $('<li role="presentation">').append(
-                    $('<a>', { href: "", id: data.peerId }).text(data.name)
-                )
-            );
-
-            $('#' + data.peerId).click(function(){
-               $scope.makeCall(data.peerId);
-            });
+                $('#' + data[i].peerId).click(function(){
+                    var id = $(this).prop('id');
+                    $scope.makeCall(id);
+                });
+            }
         });
 
         socket.on('time', function(data) {

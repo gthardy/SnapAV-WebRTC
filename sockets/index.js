@@ -1,11 +1,20 @@
 (function(sockets){
-	
+    var clients = [];
 	sockets.init = function(server, io){
 		io.on('connection', function(socket){
-			
-			socket.on('init', function(data){
-                io.emit('init',  data);
-                console.log(data.name + ' ' + data.email + ' ' + data.peerId);
+
+
+
+            socket.on('init', function(data){
+                clients.push(data);
+                io.emit('init',  clients);
+
+                console.log(clients);
+            });
+
+            socket.on('disconnect', function() {
+                clients.splice(clients.indexOf(socket), 1);
+                io.emit('init', clients);
             });
 
 			socket.on('chat message', function(data){
