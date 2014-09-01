@@ -4,7 +4,6 @@ app.controller('mainController', function($scope){
     $scope.PeerId = '';
     $scope.RemotePeerId = '';
     $scope.Name = '';
-    $scope.Email = '';
     $scope.BriefDesc = '';
     $scope.UserCount = 0;
 
@@ -38,9 +37,13 @@ app.controller('mainController', function($scope){
         });
 
         socket.on('init', function(data){
+
             $('#availableUsers li').remove();
+
             for (var i = 0; i < data.length; i++) {
+
                 if($scope.PeerId !== data[i].peerId) {
+
                     $('#availableUsers').append(
                         $('<li role="presentation">').append(
                             $('<a>', { href: "", id: data[i].peerId }).text(data[i].name)
@@ -99,15 +102,16 @@ app.controller('mainController', function($scope){
         });
 
         $('#navScreenSharing').click(function(){
-
+            $scope.startScreenSharing();
         });
 
         $('#myModal').modal('show');
     };
 
     $scope.getCustomer = function(){
-        socket.emit('init', { peerId: $scope.PeerId, name: $scope.Name, email: $scope.Email });
+        socket.emit('init', { peerId: $scope.PeerId, name: $scope.Name });
         $('#myModal').modal('hide');
+
     };
 
     $scope.makeCall = function(peerId){
@@ -129,16 +133,17 @@ app.controller('mainController', function($scope){
         navigator.getUserMedia(options, $scope.onSuccessVideo, $scope.onError);
     };
 
+    $scope.startScreenSharing = function(){
+
+    };
+
     $scope.onSuccessVideo = function(stream){
         $('#localVideo').prop('src', URL.createObjectURL(stream));
         window.localStream = stream;
     };
-    $scope.onSuccessRemoteVideo = function(call){
-        console.log(call);
-    }
+
     $scope.onError = function(e){
         console.log(e);
     };
-
     $scope.init();
 });
