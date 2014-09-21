@@ -1,7 +1,7 @@
 
 <div class="row">
 
-    <div class="col-md-3">
+    <div class="col-md-3" id="chat">
         <form role="form" >
           <div class="panel panel-default">
 
@@ -28,10 +28,6 @@
                 </div>
 
                 <div class="panel-body" >
-                    <div class="videocontent">
-                        <video id="localVideo" class="video-js" controls
-                               preload="auto" width="auto" height="auto" autoplay ></video>
-                    </div>
                     <div class="message-text">
                         <ul class="chat" id="messages">
                         </ul>
@@ -52,20 +48,16 @@
         </form>
     </div>
 
-    <div class="col-md-9">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <span class="glyphicon glyphicon-comment"></span> Video and Screen Sharing
-            </div>
-            <div class="panel-body">
-                <div class="videocontent">
-                    <video id="remoteVideo" class="video-js" controls
-                           preload="auto" width="auto" height="auto" autoplay ></video>
-                </div>
-            </div>
-            <div class="panel-footer">
+    <div class="col-md-12" id="main-content">
 
-            </div>
+        <div class="videocontent">
+            <video id="localVideo" class="video-js" controls
+                   preload="auto" width="auto" height="auto" autoplay ></video>
+        </div>
+
+        <div class="videocontent">
+            <video id="remoteVideo" class="video-js" controls
+                   preload="auto" width="auto" height="auto" autoplay ></video>
         </div>
 
     </div>
