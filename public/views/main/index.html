@@ -6,7 +6,7 @@
           <div class="panel panel-default">
 
                 <div class="panel-heading">
-                    <span class="glyphicon glyphicon-comment"></span> {{ Name }}'s Video
+                    <span class="glyphicon glyphicon-comment"></span> {{ Name }}
                     <div class="btn-group pull-right">
                         <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                             <span class="glyphicon glyphicon-chevron-down"></span>
@@ -38,17 +38,15 @@
                     <div class="input-group">
                         <input id="m" type="text" class="form-control input-sm" placeholder="Type your message here...">
                 <span class="input-group-btn">
-                    <button class="btn btn-warning btn-sm" type="submit" id="btn-chat">
-                        Send</button>
+                    <button class="btn btn-primary btn-sm" type="submit" id="btn-chat">Send</button>
                 </span>
                     </div>
                 </div>
             </div>
-
         </form>
     </div>
 
-    <div class="col-md-12" id="main-content">
+    <div class="col-md-9" id="main-content">
 
         <div class="videocontent">
             <video id="localVideo" class="video-js" controls
@@ -60,7 +58,11 @@
                    preload="auto" width="auto" height="auto" autoplay ></video>
         </div>
 
+        <div class="screensharing">
+            <h1>Screen sharing Content</h1>
+        </div>
     </div>
+
 </div>
 
 

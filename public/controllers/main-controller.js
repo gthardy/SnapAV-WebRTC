@@ -81,9 +81,9 @@ app.controller('mainController', function($scope){
                 $('<li class="left clearfix">').append(
                     $('<div class="chat-body clearfix">').append(
                         $('<div class="header">').append(
-                            $('<strong class="primary-font">').text(data.name).append(
-                                $('<small class="pull-right text-muted">').append(
-                                    $('<span class="glyphicon glyphicon-time">').text(' ' + time.toLocaleTimeString()).append(
+                            $('<b class="primary-font">').text(data.name).append(
+                                $('<small class="pull-right">').append(
+                                    $('<span class="">').text(' ' + time.toLocaleTimeString()).append(
 
                                     )
                                 )
