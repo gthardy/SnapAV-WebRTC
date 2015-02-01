@@ -1,11 +1,4 @@
-.navbar{
-    height:90px;
-    margin-bottom: 10px;
-}
 
-#main-content{
-    padding-top:100px;
-}
 .video-js{
     height:100%;
     width:100%;
@@ -74,6 +67,9 @@
 
 #remoteVideo{
     display:none;
+}
+.footer{
+    padding:10px 10px 10px 10px;
 }
 /*
 #localVideo{
