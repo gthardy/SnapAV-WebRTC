@@ -83,9 +83,7 @@ app.controller('mainController', function($scope){
                         $('<div class="header">').append(
                             $('<b class="primary-font">').text(data.name).append(
                                 $('<small class="pull-right">').append(
-                                    $('<span class="">').text(' ' + time.toLocaleTimeString()).append(
-
-                                    )
+                                    $('<span class="">').text(' ' + time.toLocaleTimeString()).append()
                                 )
                             )
                         ).append(

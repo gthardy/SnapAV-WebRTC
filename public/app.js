@@ -14,7 +14,6 @@ app.config(['$routeProvider', '$locationProvider',
                 templateUrl: '/views/main/index.html',
                 controller: 'mainController'
             })
-
             .otherwise({ redirectTo: '/' });
 
         $locationProvider.html5Mode(true);

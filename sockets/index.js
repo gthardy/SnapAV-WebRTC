@@ -3,8 +3,6 @@
 	sockets.init = function(server, io){
 		io.on('connection', function(socket){
 
-
-
             socket.on('init', function(data){
                 clients.push(data);
                 io.emit('init',  clients);
