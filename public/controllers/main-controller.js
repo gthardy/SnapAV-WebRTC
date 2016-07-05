@@ -25,6 +25,7 @@ app.controller('mainController', function($scope){
     var options = { audio: true, video: true };
     var socket = io.connect();
     var clients = [];
+
     $scope.init = function(){
 
         peer.on('open', function(){

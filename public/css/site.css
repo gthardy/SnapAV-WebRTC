@@ -2,12 +2,17 @@
 body{
     margin-top:50px;
 }
-
-.video-js{
-    height:100%;
-    width:100%;
+.videocontent{
+    position:relative;
 }
+.local-video{
 
+}
+.remote-video{
+    position:absolute;
+    top:5px;
+    left:5px;
+}
 .chat
 {
     list-style: none;
